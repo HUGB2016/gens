@@ -15,5 +15,7 @@ Steps to setup project:
 10. Add Gradle Wrapper git add -f gradle/wrapper/gradle-wrapper.jar
 11. Login to Heroku with toolbelt
 12. Create Heroku app, heroku apps:create
-13. Push to Heroku, git push heroku master
-14. Add stage task to build.gradle
+13. Add stage task to build.gradle
+14. Rename app on Heroku
+15. Add deploy to .travis.yml file
+16. Push to Heroku, git push heroku master
