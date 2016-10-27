@@ -13,3 +13,7 @@ Steps to setup project:
 8. Add .travis.yml file to root folder
 9. Add badge to README file
 10. Add Gradle Wrapper git add -f gradle/wrapper/gradle-wrapper.jar
+11. Login to Heroku with toolbelt
+12. Create Heroku app, heroku apps:create
+13. Push to Heroku, git push heroku master
+14. Add stage task to build.gradle
