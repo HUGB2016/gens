@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/HUGB2016/gens.svg?branch=master)](https://travis-ci.org/HUGB2016/gens)
 # gens
 Late term group assignment in HUGB 2016 at Reykjavík University.
 
@@ -8,3 +9,6 @@ Steps to setup project:
 4. Add folder structure to project
 5. Add basic java program and test
 6. Add application plugin and mainClassName to build.gradle
+7. Login to travis-ci.org and give access to github repo
+8. Add .travis.yml file to root folder
+9. Add badge to README file
