@@ -12,3 +12,4 @@ Steps to setup project:
 7. Login to travis-ci.org and give access to github repo
 8. Add .travis.yml file to root folder
 9. Add badge to README file
+10. Add Gradle Wrapper git add -f gradle/wrapper/gradle-wrapper.jar
