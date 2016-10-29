@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.gens.tictactoe.BoardTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-10-27T14:22:58" hostname="Surface" time="0.0">
+<testsuite name="is.gens.tictactoe.BoardTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-10-29T23:30:38" hostname="Surface" time="0.0">
   <properties/>
   <testcase name="displayEmptyBoard" classname="is.gens.tictactoe.BoardTest" time="0.0"/>
   <system-out><![CDATA[?
