@@ -6,5 +6,7 @@ public class TicTacToe {
 		
 		Board board = new Board();    
 		board.displayBoard(table);
+		
+		System.out.println("Everything is working now!");
     }
 }

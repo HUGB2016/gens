@@ -1,1 +1,1 @@
-web: build/install/tictactoe/bin/tictactoe
+web: build/install/gens/bin/gens

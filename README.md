@@ -16,6 +16,7 @@ Steps to setup project:
 11. Login to Heroku with toolbelt
 12. Create Heroku app, heroku apps:create
 13. Add stage task to build.gradle
-14. Rename app on Heroku
+14. Rename app on Heroku (may need to do, 'git remote remove heroku' and then 'heroku git:remote -a NEWNAME')
 15. Add deploy to .travis.yml file
 16. Push to Heroku, git push heroku master
+17. Add println to Java app to check if it logs on Heroku server
