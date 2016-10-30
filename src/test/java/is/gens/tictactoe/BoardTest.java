@@ -25,6 +25,17 @@ public class BoardTest {
     	Board board = new Board();
     	boolean check = board.checkColWinner(table);
 
+    	assertFalse(board.checkColWinner(table));
+	 }
+
+	 @Test
+	public void checkDiagonal() {
+
+    	char[][] table = {{'X', '2', '3'}, {'X', 'X', '6'}, {'X', '8', 'X'}};
+    	
+    	Board board = new Board();
+    	boolean check = board.checkColWinner(table);
+
     	assertTrue(board.checkColWinner(table));
 	 }
 }
