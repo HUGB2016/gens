@@ -20,6 +20,18 @@ public class Board {
 	    }
     }
 
+   	public boolean canMove(char table[][]) {
+	    for (int i = 0; i < 3; i++) {
+	        for (int j = 0; j < 3; j++) {
+	            if (table[i][j] != 'X' && table[i][j] != 'O')
+	            {
+	                return true;
+	            }
+	        }
+	    }
+	    return false;
+	}
+
     public boolean checkRowWinner(char table[][]) {
     	if((table[0][0] == 'X' || table [0][0] == 'O') && table[0][0] == table[0][1] && table[0][1] == table[0][2]) {
 	        return true;	
@@ -77,5 +89,7 @@ public class Board {
 			return false;
 		}
 	}
+
+
 }
 
