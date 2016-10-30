@@ -6,6 +6,25 @@ import org.junit.Test;
 
 public class BoardTest {
 
+
+    @Test
+    public void makeMoveTest() {
+
+        char[][] table = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
+        
+        Board board = new Board();
+
+        assertTrue(board.checkRowWinner(table));
+     }
+
+     @Test
+     public void changePlayerTest() {
+        Board board = new board();
+        board.changePlayer("X");
+        assertEquals("Value should be O","O", board.player);
+     }
+
+
 	@Test
 	public void checkWinnerRow() {
 

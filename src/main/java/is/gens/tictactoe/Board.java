@@ -1,5 +1,7 @@
 package is.gens.tictactoe;
 
+import java.util.*;
+
 public class Board {
     
 	public void displayBoard(char[][] table){
@@ -19,6 +21,42 @@ public class Board {
 	    	System.out.println("Empty board");
 	    }
     }
+
+    public static void makeMove(char table[][], char player, int number) {	
+		if (number >= 1 || number <= 9) {
+			int convert = number + 48;
+			char value_equals = (char) convert;
+
+		    for (int i = 0; i < 3; i++) {
+		        for (int j = 0; j < 3; j++) {
+		        	if(table[i][j] == value_equals)	{
+		        		if(table[i][j] != 'X' && table[i][j] != 'O')
+		        		{
+		        			table[i][j] = player;
+		        		}
+		        		else {
+		        			System.out.println("\nInvalid position!\n");
+		        		}
+		        	}
+		        }
+		    }
+		    
+		}
+		else  {
+	    	System.out.println("\nInvalid position!\n");
+	    }
+	}
+
+	public static char changePlayer(char player) {
+		char mark = player;
+		if(mark == 'X') {
+			return 'O';
+		}
+		else {
+			return 'X';
+		}
+	}
+
 
    	public boolean canMove(char table[][]) {
 	    for (int i = 0; i < 3; i++) {
@@ -46,7 +84,7 @@ public class Board {
 	    	return false;
 	    }
     }
-    public boolean checkColWinner(char table[][])  {   	
+    public boolean checkColWinner(char table[][]) {   	
     	if((table[0][0] == 'X' || table [0][0] == 'O') && table[0][0] == table[1][0] && table[1][0] == table[2][0]) {
 	        return true;	
 	    }
@@ -60,7 +98,7 @@ public class Board {
 	    	return false;
 	    }
     }
-    public boolean checkDiogonalWinner(char table[][])  {   	
+    public boolean checkDiogonalWinner(char table[][]) {   	
     	if((table[0][0] == 'X' || table [0][0] == 'O') && table[0][0] == table[1][1] && table[1][1] == table[2][2]) {
 	        return true;	
 	    }
@@ -72,8 +110,7 @@ public class Board {
 	    } 
     }
 
-    public boolean isOver(char table[][])
-	{
+    public boolean isOver(char table[][]) {
 		int counter = 0;
 		for(int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
