@@ -19,7 +19,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-task stage(dependsOn: ['clean', 'build', 'installDist', 'javadoc'])
+task stage(dependsOn: ['clean', 'build', 'installDist'])
 build.mustRunAfter clean
 installDist.mustRunAfter build
 javadoc.mustRunAfter installDist
+
+task exportjavadoc(type: Exec) {
+	executable "sh"
+	args "bin/exportdoc"
+}
+build.finalizedBy(exportjavadoc)

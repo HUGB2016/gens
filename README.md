@@ -2,6 +2,8 @@
 # gens
 Late term group assignment in HUGB 2016 at Reykjavík University.
 
+##Docs available at: https://hugb2016.github.io/gens/
+
 ##Steps to setup project:
 1. Create repo on Github
 2. Clone repo locally

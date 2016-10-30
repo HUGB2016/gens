@@ -31,8 +31,6 @@ public class TicTacToe {
 			
 			}
 		} while(board.canMove(table));
-
-		System.out.println("Everything is working now... Finally!");
     }
 
 }
