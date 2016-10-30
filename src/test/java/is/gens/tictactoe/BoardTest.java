@@ -6,15 +6,6 @@ import org.junit.Test;
 
 public class BoardTest {
 
-    @Test
-    public void displayEmptyBoard() {
-		char[][] table = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
-		
-		Board board = new Board();
-		
-        assertEquals("Everything is gonna be okay!", board.displayBoard(table)); 
-	}
-	
 	@Test
 	public void checkWinnerRow() {
 
@@ -26,5 +17,14 @@ public class BoardTest {
     	assertTrue(board.checkRowWinner(table));
 	 }
 
+	@Test
+	public void checkXdoesnotwin() {
 
+    	char[][] table = {{'X', '2', 'X'}, {'X', '5', '6'}, {'O', '8', '9'}};
+    	
+    	Board board = new Board();
+    	boolean check = board.checkColWinner(table);
+
+    	assertTrue(board.checkColWinner(table));
+	 }
 }
