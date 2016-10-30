@@ -20,6 +20,32 @@ public class Board {
 	    }
     }
 
+    public static void makeMove(char table[][], char player, int number)
+	{	
+		if (number >= 1 || number <= 9) {
+			int convert = number + 48;
+			char value_equals = (char) convert;
+
+		    for (int i = 0; i < 3; i++) {
+		        for (int j = 0; j < 3; j++) {
+		        	if(table[i][j] == value_equals)	{
+		        		if(table[i][j] != 'X' && table[i][j] != 'O')
+		        		{
+		        			table[i][j] = player;
+		        		}
+		        		else {
+		        			System.out.println("\nInvalid position!\n");
+		        		}
+		        	}
+		        }
+		    }
+		    
+		}
+		else  {
+	    	System.out.println("\nInvalid position!\n");
+	    }
+	}
+
    	public boolean canMove(char table[][]) {
 	    for (int i = 0; i < 3; i++) {
 	        for (int j = 0; j < 3; j++) {
