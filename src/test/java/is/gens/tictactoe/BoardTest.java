@@ -17,6 +17,13 @@ public class BoardTest {
         assertTrue(board.checkRowWinner(table));
      }
 
+     @Test
+     public void changePlayerTest() {
+        Board board = new board();
+        board.changePlayer("X");
+        assertEquals("Value should be X","X", board.player);
+     }
+
 
 	@Test
 	public void checkWinnerRow() {
