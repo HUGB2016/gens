@@ -21,7 +21,7 @@ public class BoardTest {
      public void changePlayerTest() {
         Board board = new board();
         board.changePlayer("X");
-        assertEquals("Value should be X","X", board.player);
+        assertEquals("Value should be O","O", board.player);
      }
 
 
