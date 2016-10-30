@@ -32,6 +32,36 @@ public class Board {
 	    return false;
 	}
 
+	public static void make_move(char table[][], char player, int number)
+	{	
+		if (number >= 1 || number <= 9) {
+			int convert = number + 48;
+			char value_equals = (char) convert;
+
+		    for (int i = 0; i < 3; i++) {
+		        for (int j = 0; j < 3; j++) {
+		        	if(table[i][j] == value_equals)
+		        		if(table[i][j] != 'X' && table[i][j] != 'O') {
+		        		{
+		        			table[i][j] = player;
+		        		}
+		        	}
+		        	else {
+		        		System.out.println("\nInvalid position!\n");
+		        	}
+		        }
+		    }
+		    
+		}
+		else  {
+	    	System.out.println("\nInvalid position!\n");
+	    }
+	}
+
+	public void showWinner(char person)  {
+		System.out.println("Winner is " + person);
+	}
+
     public boolean checkRowWinner(char table[][]) {
     	if((table[0][0] == 'X' || table [0][0] == 'O') && table[0][0] == table[0][1] && table[0][1] == table[0][2]) {
 	        return true;	
